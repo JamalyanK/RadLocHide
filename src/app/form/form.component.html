@@ -1,0 +1,120 @@
+<div class="ALL">
+
+  <div class="wrapAll">
+
+    <form [formGroup]="form">
+
+      <div class="wrapYN">
+        <p class="process">Մշակման եղանակը</p>
+<!--        <select name="" id="" class="select" formControlName="select">-->
+<!--          <option [ngValue]="koherent" >Կոհերենտ</option>-->
+<!--          <option [ngValue]="vochKoherent">Ոչ կոհերենտ</option>-->
+<!--        </select>-->
+        <input type="text" formControlName="select">
+      </div>
+
+      <div class="wrapA" formGroupName="amplituda">
+        <p class="amplituda">Իմպ․ ամպլիտուդ (A)</p>
+        <input type="text" formControlName="a1">
+        <input type="text" formControlName="a2">
+        <input type="text" formControlName="a3">
+        <input type="text" formControlName="a4">
+        <input type="text" formControlName="a5">
+        <input type="text" formControlName="a6">
+        <input type="text" formControlName="a7">
+        <input type="text" formControlName="a8">
+        <input type="text" formControlName="a9">
+        <input type="text" formControlName="a10">
+        <input type="text" formControlName="a11">
+      </div>
+
+
+      <div class="wrapN">
+        <p class="count">Իմպ․ քանակը փաթեթում (N)</p>
+        <input class="inpCount" type="number" value="15" step="15" max="100" formControlName="count">
+      </div>
+
+      <div class="wrapP">
+        <p class="false">Կեղծ տագնապի հավ․ (P(Г<sub>s</sub>/0))</p>
+        <input class="inpFalse" type="text" formControlName="false">
+      </div>
+
+      <div class="wrapD">
+        <p class="border">Սահմանային շեմը (d)</p>
+        <input class="inpBorder" type="text" formControlName="border">
+      </div>
+
+      <div class="wrapK">
+        <p class="detect">Հայտաբերման շեմը (K)</p>
+        <input class="inpDetect" type="text" formControlName="detect">
+      </div>
+
+      <div class="wrapI">
+        <p class="expCount">Փորձերի քանակը (I)</p>
+        <input class="inpExpCount" type="text" formControlName="expCount">
+      </div>
+
+      <div class="wrapBtn">
+        <button class="btnCount" (click)="hashvel()">Հաշվել</button>
+        <button class="btnWrite" (click)="clickMe()">Տպել</button>
+        <button class="btnDelete">Ջնջել</button>
+      </div>
+
+    </form>
+
+  </div>
+
+  <div class="table">
+    <table>
+      <tr>
+        <th>A<sub>k</sub></th>
+        <th>P(Г<sub>s</sub>/S)</th>
+      </tr>
+      <tr>
+        <td>{{ amplituda[0] }}</td>
+        <td>{{ p[0] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[1] }}</td>
+        <td>{{ p[1] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[2] }}</td>
+        <td>{{ p[2] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[3] }}</td>
+        <td>{{ p[3] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[4] }}</td>
+        <td>{{ p[4] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[5] }}</td>
+        <td>{{ p[5] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[6] }}</td>
+        <td>{{ p[6] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[7] }}</td>
+        <td>{{ p[7] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[8] }}</td>
+        <td>{{ p[8] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[9] }}</td>
+        <td>{{ p[9] }}</td>
+      </tr>
+      <tr>
+        <td>{{ amplituda[10] }}</td>
+        <td>{{ p[10] }}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>

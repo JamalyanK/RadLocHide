@@ -1,0 +1,114 @@
+input {
+  width: 35px;
+  margin-left: 12px;
+  border: 1px solid black;
+}
+
+.wrapAll {
+  display: inline-block;
+  width: 950px;
+  position: relative;
+  top: -25px;
+}
+
+.wrapYN {
+  margin-left: 140px;
+}
+
+.process {
+  display: inline-block;
+}
+
+.select {
+  margin-left: 57px;
+}
+
+.wrapA {
+  width: 800px;
+  margin-left: 140px;
+}
+
+.amplituda {
+  display: inline-block;
+  width: 170px;
+  margin-right: 14px;
+}
+
+.wrapN, .wrapD, .wrapI {
+  display: inline-block;
+  width: 400px;
+  margin-left: 140px;
+}
+
+.wrapP, .wrapK {
+  display: inline-block;
+  width: 400px;
+}
+
+.inpCount {
+  display: inline-block;
+  margin-left: 38px;
+}
+
+.inpFalse {
+  display: inline-block;
+  margin-left: 63px;
+}
+
+.inpBorder {
+  display: inline-block;
+  margin-left: 92px;
+}
+
+.inpDetect {
+  display: inline-block;
+  margin-left: 112px;
+}
+
+.inpExpCount {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.count, .border, .expCount {
+  display: inline-block;
+}
+
+.false, .detect {
+  display: inline-block;
+  margin-left: 7px;
+}
+
+.btnCount {
+  width: 80px;
+}
+
+.btnWrite {
+  margin: 0 15px;
+  width: 80px;
+}
+
+.btnDelete {
+  width: 80px;
+}
+
+.wrapBtn {
+  margin: 20px 140px;
+}
+
+.table {
+  display: inline-block;
+  margin-left: 17px;
+  position: relative;
+  top: 8px;
+}
+
+td,th {
+  border: 1px solid #909090;
+  text-align: center;
+  width: 50px;
+}
+
+table {
+  border-collapse: collapse;
+}
