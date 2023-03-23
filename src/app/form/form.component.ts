@@ -13,7 +13,7 @@ export class FormComponent implements OnInit {
 
   form: FormGroup;
   amplituda = [];
-  N;
+  N;  
   P;
   d;
   K;
@@ -43,35 +43,34 @@ export class FormComponent implements OnInit {
   ngOnInit() {
     this.form = new FormGroup({
       amplituda: new FormGroup({
-        a1: new FormControl(),
-        a2: new FormControl(),
-        a3: new FormControl(),
-        a4: new FormControl(),
-        a5: new FormControl(),
-        a6: new FormControl(),
-        a7: new FormControl(),
-        a8: new FormControl(),
-        a9: new FormControl(),
-        a10: new FormControl(),
-        a11: new FormControl(),
+        a1: new FormControl(0),
+        a2: new FormControl(0.1),
+        a3: new FormControl(0.2),
+        a4: new FormControl(0.3),
+        a5: new FormControl(0.4),
+        a6: new FormControl(0.5),
+        a7: new FormControl(0.6),
+        a8: new FormControl(0.7),
+        a9: new FormControl(0.8),
+        a10: new FormControl(0.9),
+        a11: new FormControl(1),
       }),
-      select: new FormControl(),
-      count: new FormControl(),
-      false: new FormControl(),
-      border: new FormControl(),
-      detect: new FormControl(),
-      expCount: new FormControl()
+      select: new FormControl(1),
+      count: new FormControl(30),
+      false: new FormControl(0.1),
+      border: new FormControl(0.2),
+      detect: new FormControl(16.03),
+      expCount: new FormControl(1000)
     });
   }
 
   hashvel() {
     this.p = [];
-    this.N = '';
-    this.P = '';
-    this.d = '';
-    this.K = '';
-    this.I = '';
-    this.gen = '';
+    this.N
+    this.P
+    this.d
+    this.K
+    this.I
     this.gen = +this.form.get('select').value;
     this.N = +this.form.get('count').value;
     this.P = +this.form.get('false').value;
@@ -86,7 +85,7 @@ export class FormComponent implements OnInit {
       this.m = 0;
 
       for (let i = 1; i <= this.I; i++) {
-        if (this.gen = 1) {
+        if (this.gen == 1) {
           this.Z = 0;
         } else {
           this.fi = 2 * Math.PI * Math.random();
@@ -103,7 +102,9 @@ export class FormComponent implements OnInit {
           }
 
           this.Ux = this.Ux - 6;
-          if (this.gen = 1) {
+
+          //----//
+          if (this.gen == 1) {
             this.Uj = this.amplituda[this.k - 1] + this.Ux;
             if (this.Uj <= this.d) {
               this.f = this.f + 1;
@@ -126,7 +127,7 @@ export class FormComponent implements OnInit {
           }
 
         }
-        if (this.gen = 1) {
+        if (this.gen == 1) {
           this.T = this.Z - this.K;
         } else {
           this.T = Math.pow(this.z1, 2) + Math.pow(this.z2, 2) - this.K;
@@ -144,17 +145,17 @@ export class FormComponent implements OnInit {
 
     }
 
-    this.form.get('count').reset();
-    this.form.get('false').reset();
-    this.form.get('border').reset();
-    this.form.get('detect').reset();
-    this.form.get('expCount').reset();
-    this.form.get('select').reset();
+    // this.form.get('count').reset();
+    // this.form.get('false').reset();
+    // this.form.get('border').reset();
+    // this.form.get('detect').reset();
+    // this.form.get('expCount').reset();
+    // this.form.get('select').reset();
 
   }
 
   public clickMe() {
-    this.dataService.doClick(this.p);
+    this.dataService.doClick(this.p, this.N, this.d, this.P);
   }
 }
 

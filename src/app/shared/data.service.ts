@@ -11,13 +11,13 @@ export class DataService {
   private arr;
   onClick: EventEmitter<any> = new EventEmitter();
 
-  public doClick(x) {
+  public doClick(p, N, d, P) {
     this.arr = [
-      {data: x, label: this.series[this.i]},
+      {data: p, label:  `N = ${N}, d0 = ${d}, P(Гs/0) =${P}`},
       {
         borderColor: this.colors[this.i],
         backgroundColor: 'rgba(0,0,0,0)'
-      }
+      },
     ];
     this.onClick.emit(this.arr);
     this.i++;

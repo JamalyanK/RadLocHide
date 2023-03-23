@@ -11,7 +11,7 @@ import {DataService} from '../shared/data.service';
 export class ScheduleComponent implements OnInit {
 
   public lineChartData: ChartDataSets[] = [
-    {data: [0.078, 0.208, 0.455, 0.694, 0.854, 0.969, 0.995, 1, 1, 1, 1], label: 'Series A', borderDash: [20, 5]}
+    { label: ''}
   ];
   public lineChartLabels: Label[] = ['0', '0.1', '0.2', '0.3', '0.4', '0.5', '0.6', '0.7', '0.8', '0.9', '1'];
   public lineChartOptions = {
@@ -19,7 +19,7 @@ export class ScheduleComponent implements OnInit {
   };
   public lineChartColors: Color[] = [
     {
-      borderColor: 'red',
+      borderColor: 'rgba(0,0,0,0)' ,
       backgroundColor: 'rgba(0,0,0,0)'
     }
   ];
